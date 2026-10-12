@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SASTRANET is a student tech community that runs workshops, hackathons and talks.">
+  <title>SASTRANET | Student Tech Community</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation bar ===== -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="brand">
+        <img src="assets/logo.svg" alt="" width="32" height="32">
+        <span>SASTRANET</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#abt">About</a></li>
+        <li><a href="#event">Events</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="add-announcement.html">Add Announcement</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <p class="hero-tag">Student Tech Community</p>
+        <h1>Learn it. Build it. Share it.</h1>
+        <p class="hero-text">
+          SASTRANET is a friendly community of students who love technology.
+          Join our workshops, hackathons and talks, and grow your skills with people who are learning just like you.
+        </p>
+        <div class="hero-buttons">
+          <a href="#events" class="btn btn-primary">Explore Events</a>
+          <a href="#about" class="btn btn-outline">Learn More</a>
+        </div>
+
+        <ul class="hero-stats">
+          <li><strong>150+</strong><span>Members</span></li>
+          <li><strong>20+</strong><span>Events a year</span></li>
+          <li><strong>4</strong><span>Learning tracks</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About the Community</h2>
+        <p class="section-subtitle">
+          We are a student-run club. Everyone is welcome, whether you wrote your first line of code yesterday or five years ago.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📚</div>
+            <h3>Learn</h3>
+            <p>Hands-on workshops that start from the basics and are taught by senior students.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🛠️</div>
+            <h3>Build</h3>
+            <p>Team projects and hackathons where you turn ideas into working apps.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🤝</div>
+            <h3>Connect</h3>
+            <p>Meet mentors, find teammates and make friends who share your interests.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Events ===== -->
+    <section class="section section-alt" id="events">
+      <div class="container">
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="section-subtitle">Find something that interests you. Search by name or pick a category.</p>
+
+        <div class="event-controls">
+          <div class="search-wrapper">
+            <label for="searchInput" class="visually-hidden">Search events</label>
+            <input type="search" id="searchInput" placeholder="Search events..." autocomplete="off">
+          </div>
+
+          <div class="filter-buttons" role="group" aria-label="Filter events by category">
+            <button class="filter-btn active" data-category="All">All</button>
+            <button class="filter-btn" data-category="Workshop">Workshop</button>
+            <button class="filter-btn" data-category="Hackathon">Hackathon</button>
+            <button class="filter-btn" data-category="Talk">Talk</button>
+            <button class="filter-btn" data-category="Social">Social</button>
+          </div>
+        </div>
+
+        <p class="results-count" id="resultsCount" aria-live="polite"></p>
+
+        <div class="event-grid" id="eventGrid"></div>
+
+        <p class="empty-message" id="emptyMessage" hidden>
+          No events found. Try a different search or category.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Announcements ===== -->
+    <section class="section" id="announcements">
+      <div class="container">
+        <div class="announcements-header">
+          <div>
+            <h2 class="section-title">Announcements</h2>
+            <p class="section-subtitle">The latest news from the community.</p>
+          </div>
+          <a href="add-announcement.html" class="btn btn-secondary">Add New Announcement</a>
+        </div>
+
+        <ul class="announcement-list">
+          <li class="announcement">
+            <span class="announcement-tag tag-new">New</span>
+            <div>
+              <h3>Club membership is open</h3>
+              <p>Join the community by visiting the club desk during the first week of the month. It is free for all students.</p>
+            </div>
+          </li>
+          <li class="announcement">
+            <span class="announcement-tag tag-pinned">Pinned</span>
+            <div>
+              <h3>Weekly Code Circle</h3>
+              <p>Every Friday evening we meet to solve coding puzzles together. Bring a laptop and a friend.</p>
+            </div>
+          </li>
+          <li class="announcement">
+            <span class="announcement-tag tag-reminder">Reminder</span>
+            <div>
+              <h3>Mentors wanted</h3>
+              <p>Senior students who would like to guide juniors can send us a message through the contact details below.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand brand-footer">
+          <img src="assets/logo.svg" alt="" width="28" height="28">
+          <span>SASTRANET</span>
+        </a>
+        <p class="footer-text">A student-run tech community. Learn, build and share together.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#announcements">Announcements</a></li>
+          <li><a href="add-announcement.html">Add Announcement</a></li>
+          <li><a href="#home">Back to top</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@sastranet.example">hello@sastranet.example</a></li>
+          <li>Club desk, Student Activity Centre</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; <span id="currentYear">2026</span> SASTRANET Dev Team. Made by students.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

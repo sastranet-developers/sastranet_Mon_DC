@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Add a new announcement to the SASTRANET community board.">
+  <title>Add Announcement | SASTRANET</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation bar ===== -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="" width="32" height="32">
+        <span>SASTRANET</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#abt">About</a></li>
+        <li><a href="index.html#event">Events</a></li>
+        <li><a href="index.html#announcements">Announcements</a></li>
+        <li><a href="add-announcement.html" class="active">Add Announcement</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <div class="page-header">
+      <h1 class="page-title">Add New Announcement</h1>
+      <p class="section-subtitle">Post a new update or notice for club members.</p>
+      <a href="index.htm" class="back-link">&larr; Back to Home</a>
+    </div>
+
+    <div class="announcement-form-container">
+      <form id="announcementForm" class="basic-form">
+        <div class="form-group">
+          <label for="announcement-title">Announcement Title *</label>
+          <input type="text" id="announcement-title" name="title" placeholder="e.g. Next General Meeting" required>
+        </div>
+
+        <div class="form-group">
+          <label for="announcementCategory">Category</label>
+          <select id="announcementCategory" name="category">
+            <option value="New">New</option>
+            <option value="Pinned">Pinned</option>
+            <option value="Reminder">Reminder</option>
+            <option value="Notice">Notice</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="announcementAuthor">Author</label>
+          <input type="text" id="announcementAuthor" name="author" placeholder="e.g. Community Lead">
+        </div>
+
+        <div class="form-group">
+          <label for="announcementDescription">Details *</label>
+          <textarea id="announcementDescription" name="description" rows="4" placeholder="Enter announcement content..." required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitAnnouncement" class="btn btn-primary">Publish Announcement</button>
+          <button type="button" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <p id="formStatus" class="status-msg" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <section class="recent-announcements-section">
+      <h2 class="section-title">Current Announcements</h2>
+      <div id="announcementDisplayList" class="announcement-list"></div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand brand-footer">
+          <img src="assets/logo.svg" alt="" width="28" height="28">
+          <span>SASTRANET</span>
+        </a>
+        <p class="footer-text">A student-run tech community. Learn, build and share together.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#events-section">Events</a></li>
+          <li><a href="#add">Add Announcement</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@sastranet.example">hello@sastranet.example</a></li>
+          <li>Club desk, Student Activity Centre</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 SASTRANET Dev Team. Made by students.</p>
+  </footer>
+
+  <script src="js/announcements.js"></script>
+</body>
+</html>
